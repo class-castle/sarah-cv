@@ -1,0 +1,16 @@
+<ul>
+	<li  {{action 'toggleFullNav'}} class='menu-toggle'>
+		<div class='hamburger'>
+			<span class='hamburger-stripe'></span>
+			<span class='hamburger-stripe'></span>
+			<span class='hamburger-stripe'></span>
+		</div>
+		{{svg/icon-collapse-menu class='nav-collapse'}}
+	</li>
+	<li>{{#link-to 'index'}}{{svg/icon-home}}Home{{/link-to}}</li>
+	<li>{{#link-to 'introduction'}}{{svg/icon-home}}Introduction{{/link-to}}</li>
+    <li>{{#link-to 'work-experience'}}{{svg/icon-new-doc class='create-job'}}Work Experience{{/link-to}}</li>
+    <li>{{#link-to 'skills'}}{{svg/icon-bar-graph class='view-jobs'}}Skills{{/link-to}}</li>
+    <li>{{#link-to 'references'}}{{svg/icon-info class='faq'}}References{{/link-to}}</li>
+    
+</ul>

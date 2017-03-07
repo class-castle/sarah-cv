@@ -1,0 +1,163 @@
+@susceptible-colour: #95d195;
+@intermediate-resistance-colour: #f6d481;
+@resistant-colour: #f67f7f;
+@low-coverage-colour: #ddd;
+
+/*div.resistance-report  {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 20px;
+	float: left;
+	width: 620px;
+}*/
+
+div.resistance-report table {
+	border-width: 0;
+	margin: 0;
+	width: 620px;
+	table-layout: fixed;
+}
+
+div.resistance-report table.report-intro {
+	margin-bottom: 3px;
+}
+
+div.resistance-report table.report-intro tr td {
+	border-width: 0;
+	padding: 0 10px 10px 0;
+	width: 300px;
+} 
+
+div.resistance-report table.report-intro tr td.sample-id {
+	padding-bottom: 13px;
+} 
+
+
+div.resistance-report table.report-keys {
+	margin-bottom: 18px;
+}
+
+div.resistance-report table.report-keys tr td {
+	padding: 0;
+	border: 0;
+}
+
+div.resistance-report table.report-keys tr td.color-key  {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: 450px;
+}
+
+div.resistance-report table.report-keys tr td.download-consensus-pdf  {
+	width: 170px;
+}
+
+div.resistance-report a.button.download-consensus-pdf {
+	float: right;
+}
+
+div.resistance-report button.consensus-pdf-unavailable {
+	float: right;
+	width: 151px;
+}
+
+span.color-key-disc {
+	height: 15px;
+	width: 15px;
+	display: inline-block;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-right: 5px;
+	margin-bottom: -2px;
+}
+
+span.color-key-text {
+	margin-right: 10px;
+}
+
+span.color-key-disc.susceptible {
+	background: @susceptible-colour;
+}
+
+span.color-key-disc.intermediate {
+	background: @intermediate-resistance-colour;
+}
+
+span.color-key-disc.resistant {
+	background: @resistant-colour;
+}
+
+span.color-key-disc.low-coverage {
+	background: @low-coverage-colour;
+}
+
+div.resistance-report table.report-main tr th {
+	padding: 8px;
+	background: #fff;
+	color: #555;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-color: #666;
+	background: #eee;
+}
+
+div.resistance-report table.report-main tr th.column-four {
+	width: 164px;
+}
+div.resistance-report table.report-main tr th.class {
+	width: 90px;
+}
+div.resistance-report table.report-main tr th.drug  {
+	width: 40px;
+}
+
+div.resistance-report table.report-main tr th.call  {
+	width: 36px;
+}
+
+div.resistance-report table.report-main tr td {
+	padding: 8px;
+	border-color: #666;
+}
+
+div.resistance-report table.report-main tbody td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div.resistance-report table.report-main tr td.mutation-list {
+	line-height: 170%;
+}
+
+div.resistance-report table.report-main tr td.call {
+	text-align: center;
+}
+
+div.resistance-report table.report-main tr.LC td.colour {
+	background: @low-coverage-colour;
+}
+
+div.resistance-report table.report-main tr.S td.colour {
+	background: @susceptible-colour;
+}
+
+div.resistance-report table.report-main tr.I td.colour {
+	background: @intermediate-resistance-colour;
+}
+
+div.resistance-report table.report-main tr.R td.colour {
+	background: @resistant-colour;
+}
+
+div.resistance-report-footer {
+	padding-top: 10px;
+	font-size: 1.2em/@body-content-text-font-size;
+	line-height: 120%;
+	text-align: left;
+}
+
+div.resistance-report-footer p:last-child {
+	margin-bottom: 0;
+}

@@ -7,6 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.route('index', {path: '/'});
+ 	this.route('introduction');
+  	this.route('work-experience');
+  	this.route('skills');
+  	this.route('references');
 });
 
 export default Router;

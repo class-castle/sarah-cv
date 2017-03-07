@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600);
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+
+@import "_mixins-and-variables/variables-bits-and-pieces";
+@import "_mixins-and-variables/variables-general-site-layout";
+@import "_mixins-and-variables/variables-custom";
+@import "_mixins-and-variables/mixins";
+
+@import "page-layouts/general";
+@import "page-layouts/authenticated";
+@import "page-layouts/public";
+@import "page-layouts/loader";
+
+@import "generic-elements/bits-and-pieces";
+@import "generic-elements/info-popouts";
+@import "generic-elements/pop-up-boxes";
+@import "generic-elements/perfect-scrollbar-overrides";
+@import "generic-elements/box-arrows";
+@import "generic-elements/spinning-cog";
+@import "generic-elements/block-row";
+
+@import "component-specific/custom-elements/form-field-input";
+@import "component-specific/custom-elements/animated-accordion";
+@import "component-specific/custom-elements/confirm-cancel-popout";
+
+@import "component-specific/layouts/main-nav";
+@import "component-specific/layouts/user-greeting";
+@import "component-specific/layouts/system-messages";
+@import "component-specific/job-full-results/resistance-reports";
+@import "component-specific/user-popout";
+@import "component-specific/svg-specific";
+@import "component-specific/in-page-alerts";
+
+/*zzz-
+Change classNames to class on link-to helpers (class used in main-nav)
+Q - how on earth does the serializer work???
+---fallback in signedUrl helper.
+---check that consensus file under advanced results works for newer jobs (pol.consensus.fatsa vs consenseus.fasta)
+Jobs table
+---Refresh/Auto poll jobs
+---Delete Jobs
+---Allow blank as a value for results per page and page number.
+---Full sample name must pop up on hover over sample IDs in full results.
+---Asterisks for required form fields.
+--------------
+New job
+---Re enter auth mixin for jobs/new
+---Do next step allowed for choose sequencing platform
+---Uncomment the two font import statements in this file.
+---------------
+Change name of app from frontend-version-two (Remember all the import statements.)
+Uncapitalise the platform names in the JS for new job.
+Must have button to go back to step 4 if paired end files have a missing file.
+
+
+Jobs table must reset properly with a system message after job deletion.
+Check that deleting multipe jobs works.
+AUTOFOCUS INPUTS WORK ON ROUTE CHANGE AND RELOAD.
+key up actions work. 
+Platform filter does not clear on "Clear all filters"
+Ask B about why non-existent email addresses don't get error response when entering email in forgot-password route.
+Radio buttons and inputs action args must have value first, then fieldname.
+Jobs/show
+New Exatype 2 updates.
+Create job - remove sample hint.
+Create job - check auth at every step change and various ther points.
+Consolidate less for table headers of samples table and files to reselect (Make all tables like this);
+color scheme for confirm cancel boxes must just be red or blue.
+
+NEW FEATURES
+Better messages in top bar.
+503 page polls.
+Better accordions which auto scroll.
+Aggregated jobs table filter for platform and status.
+Full screen for live plotly
+New spinner
+Better, more unified form field validation
+Running jobs poll and auto update when complete.
+Clear progress on new job does not refresh. (Uploads successfully aborted)
+Logout does not refresh (Logout route).
+Logging in goes to last place if auto logged out.
+Dynamic page titles.
+Help docs.
+
+-------
+//Set defaults on fom field input for validationColours, focusOutAction.
+//jobs/show/3454535635366
+//What happens if 5 of 10 files have uploaded and you abort all?
+//Base component for svg components.
+//Simulated job 96.
+*/

@@ -1,0 +1,119 @@
+/*---Displays on all pages except login and sign up and user help pages---*/
+
+div.login-greeting {
+	float: right;
+	margin: 20px 20px 0 0;	
+	height: 30px;
+}
+
+div.login-greeting span.users-name {
+	font-size: 1.4em;
+	padding: 5px 10px;
+	display: block;
+	color: #999;
+	height: 20px;
+	float: left;	
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: @general-button-border-radius;
+    -moz-border-radius: @general-button-border-radius;
+    -webkit-border-radius: @general-button-border-radius;
+	-webkit-border-top-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-bottomright: 0;
+	border-bottom-right-radius: 0;
+}
+
+div.login-greeting div.drop-down-box {
+	width: 14px;
+	display: block;
+	background: #bbb;
+	float: left;
+	height: 8px;
+	padding: 11px 8px;
+	border: 1px solid #aaa;
+	border-radius: @general-button-border-radius;
+    -moz-border-radius: @general-button-border-radius;
+    -webkit-border-radius: @general-button-border-radius;
+    border-left-width: 0;
+	-webkit-border-top-left-radius: 0;
+	-moz-border-radius-topleft: 0;
+	border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-radius-bottomleft: 0;
+	border-bottom-left-radius: 0;
+}
+
+div.login-greeting div.drop-down-box:hover {
+	background-color: #999;
+	border-color: #888;
+	cursor: pointer;
+}
+
+div.login-greeting span.drop-down-arrow {
+	width: 0; 
+	height: 0; 
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #fff;
+	float: left;
+}
+
+div.login-greeting .open div.drop-down-box {
+	background-color: @exatype-light-blue-three;
+	border-color: @exatype-light-blue-three;
+}
+
+div.login-greeting .open span.users-name {
+	border-color: @exatype-light-blue-three;
+}
+
+div.login-greeting .open div.drop-down-box span.drop-down-arrow {
+	border-bottom: 7px solid #fff;
+	border-top-width: 0;
+}
+
+/*---User popout menu box.---*/
+
+div.user-popout {
+	position: fixed;
+	z-index: 9999;
+	top: 70px;
+	right: 20px;
+	width: 200px;
+}
+
+div.user-popout:before,
+div.user-popout:after {
+   right: 17px !important;
+}
+
+div.user-popout ul {
+	list-style: none;
+	padding: 5px 0 0 0;
+	margin: 0;
+}
+
+div.user-popout a {
+	font-size: 1.5em;
+	padding: 0px 15px 15px 0;
+	text-decoration: none;
+	color: #999;
+	display: block;
+}
+
+div.user-popout a:hover {
+	color: #555;
+}
+
+div.user-popout button {
+	margin-top: 7px;
+}
+
+div.user-popout div.close-button {
+	top: -5px;
+	right: -5px;
+}
+
