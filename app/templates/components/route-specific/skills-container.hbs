@@ -1,5 +1,19 @@
 {{#layouts/restricted/page-wrapper class="skills"}}
   {{#layouts/content-wrapper title='Skills'}}
-  	<p>Skills</p>
+  	<div class='contents'>
+  	  		<h4>Contents</h4>
+          <ol>
+          {{#each session.skillsTags as |tag|}}
+            <li>{{#link-to 'required-skills' (query-params tag=tag.metaTitle)}}{{tag.title}}{{/link-to}}</li>
+          {{/each}}
+        </ol>
+  	  	</div>
+  	  	<hr>
+  	  	
+        {{#each relevantWorkExperienceItems as |item|}}
+            {{#custom-elements/animated-accordion title=item.title}}
+              {{component item.content}}
+            {{/custom-elements/animated-accordion}}
+        {{/each}}
   {{/layouts/content-wrapper}}
 {{/layouts/restricted/page-wrapper}}
