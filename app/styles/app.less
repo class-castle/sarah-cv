@@ -22,6 +22,7 @@
 @import "component-specific/custom-elements/form-field-input";
 @import "component-specific/custom-elements/animated-accordion";
 @import "component-specific/custom-elements/confirm-cancel-popout";
+@import "component-specific/custom-elements/skills-tag";
 
 @import "component-specific/layouts/main-nav";
 @import "component-specific/layouts/user-greeting";
@@ -30,6 +31,26 @@
 @import "component-specific/user-popout";
 @import "component-specific/svg-specific";
 @import "component-specific/in-page-alerts";
+
+div.work-experience-tags {
+	text-align: right;
+}
+
+.skills-tag {
+	position: relative;
+	max-width: 500px;
+	float: right;
+	clear: both;
+	padding-right: 20px;
+}
+
+.skills-tag div.svg {
+	position: absolute;
+	right: 0;
+	width: 15px;
+	margin: 5px 0 0 5px;
+	fill: @exatype-light-blue-three;
+}
 
 /*zzz-
 References
@@ -40,6 +61,9 @@ Capacity in which you worked for refs.
 Personal
 -----------------------
 Address 'Gardens'
+Photo
+Full name
+ID number
 
 Work experience
 -----------------------

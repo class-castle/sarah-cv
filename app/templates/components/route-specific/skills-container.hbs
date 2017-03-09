@@ -1,19 +1,29 @@
 {{#layouts/restricted/page-wrapper class="skills"}}
-  {{#layouts/content-wrapper title='Skills'}}
-  	<div class='contents'>
-  	  		<h4>Contents</h4>
-          <ol>
-          {{#each session.skillsTags as |tag|}}
-            <li>{{#link-to 'required-skills' (query-params tag=tag.metaTitle)}}{{tag.title}}{{/link-to}}</li>
-          {{/each}}
-        </ol>
-  	  	</div>
-  	  	<hr>
-  	  	
-        {{#each relevantWorkExperienceItems as |item|}}
-            {{#custom-elements/animated-accordion title=item.title}}
-              {{component item.content}}
-            {{/custom-elements/animated-accordion}}
+  {{#layouts/content-wrapper title='Required Skills'}}
+      {{#unless relevantWorkExperienceItems}}
+        {{#custom-elements/in-page-alert type='info'}}
+          You can click on any on the the skills listed in the contents at the top of the page to see the work experience items which relate specifically to it.
+        {{/custom-elements/in-page-alert}}
+      {{/unless}}
+      <h4>Contents</h4>
+      <hr>
+      <ol>
+        {{#each session.skillsTags as |tag|}}
+          <li>{{#link-to 'required-skills' (query-params tag=tag.metaTitle)}}{{tag.title}}{{/link-to}}</li>
         {{/each}}
+      </ol>
+    <hr>
+    <h3>{{currentTitle}}</h3>
+    {{#if relevantWorkExperienceItems}}
+      {{#custom-elements/in-page-alert type='info'}}
+      Below are all of the work experience items which relate specifically to the skill "<u>{{currentTitle}}</u>".
+        You can click on any on the the skills listed in the contents at the top of the page to see the work experience items which relate specifically to it.
+      {{/custom-elements/in-page-alert}}
+    {{/if}}
+    {{#each relevantWorkExperienceItems as |item index|}}
+        {{#custom-elements/animated-accordion title=item.title index=index}}
+          {{component item.content}}
+        {{/custom-elements/animated-accordion}}
+    {{/each}}
   {{/layouts/content-wrapper}}
 {{/layouts/restricted/page-wrapper}}

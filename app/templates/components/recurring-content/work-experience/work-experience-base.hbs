@@ -1,6 +1,11 @@
 {{component content}}
 
-{{#each item.relatedSkills as |relatedSkillIndex|}}
-	{{custom-elements/skills-tag relatedSkillIndex=relatedSkillIndex}}
-	{{relatedSkill}}
-{{/each}}
+<div class='work-experience-tags'>
+	<hr>
+	<span class='blue-caps'><b>Related skills</b></span>
+	<hr>
+	{{#each item.relatedSkills as |relatedSkillIndex|}}
+		{{custom-elements/skills-tag relatedSkillIndex=relatedSkillIndex}}
+	{{/each}}
+	<div class='clr'></div>
+</div>

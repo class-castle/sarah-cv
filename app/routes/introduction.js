@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	test: {
-		'name': 'Sarah Schafer',
-		'text': 'Hello World',
-	},
+	actions: {
+		didTransition: function() {
+			window.scrollTo(0,0);
+		},
+	}
 });

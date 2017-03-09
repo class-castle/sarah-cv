@@ -5,6 +5,14 @@ export default Ember.Component.extend({
 	classNames: ['accordion-item'],
 	classNameBindings: ['classes', 'open:open'],
 
+	didInsertElement: function() {
+		Ember.run.once(this, function() {
+			if (this.get('index') === 0) {
+			this.set('open', true);
+			}
+		});
+	},
+
 	actions: {
 		toggleAccordion: function() {
 			var self = this;
@@ -17,9 +25,8 @@ export default Ember.Component.extend({
 					var scrollBarPosition = self.$('.accordion-item-header').offset().top - 85;
 		        	Ember.$('html,body').animate({scrollTop: scrollBarPosition}, 200);
 					self.toggleProperty('open');
-			  });
+			  	});
 			}
-			
 		},
 	}
 });
