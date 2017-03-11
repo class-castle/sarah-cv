@@ -1,4 +1,12 @@
 <ul>
+	<li  {{action 'toggleFullNav'}} class='menu-toggle'>
+		<div class='hamburger'>
+			<span class='hamburger-stripe'></span>
+			<span class='hamburger-stripe'></span>
+			<span class='hamburger-stripe'></span>
+		</div>
+		{{svg/icon-collapse-menu class='nav-collapse'}}
+	</li>
 	<li>{{#link-to 'index'}}Introduction{{/link-to}}</li>
 	<li>{{#link-to 'biographical'}}Biography{{/link-to}}</li>
     <li>{{#link-to 'work-experience'}}Work Experience{{/link-to}}</li>

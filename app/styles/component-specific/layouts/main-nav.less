@@ -11,15 +11,16 @@ div.nav-sidebar {
 	left: 0;	
 	top: @header-height;
 	z-index: 99;
-	width: @sidebar-expanded-width;
+	//width: @sidebar-expanded-width;
 	overflow: visible;
 	//background: #333;
 	border-right: 1px solid #ccc;
 	height: 100%;
+	transition: @sidebar-toggle-transition;
 }
 
 div.nav-sidebar.nav-collapsed  {
-	width: @sidebar-collapsed-width;
+	height: @sidebar-nav-item-height;
 }
 
 div.nav-sidebar.nav-toggled {
@@ -70,7 +71,7 @@ div.nav-sidebar li.menu-toggle span.hamburger-stripe {
 	border-radius: 2px;
 	-moz-border-radius: 2px;
     -webkit-border-radius: 2px;
-	background: #fff;
+	background: #bbb;
 	margin: 0 0 4px 0;
 	display: block;
 }

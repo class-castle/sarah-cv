@@ -33,6 +33,71 @@
 @import "component-specific/svg-specific";
 @import "component-specific/in-page-alerts";
 
+@media(max-width: 979px) {
+
+	div.wrapper {
+		padding-top: 0;
+	}
+	header {
+		position: inherit;
+		height: auto !important;
+	}
+
+	div.login-greeting span.users-name {
+		height: auto;
+		text-align: center;
+		width: 100%;
+	}
+
+
+	.hide-below-979px {
+		display: none;
+	}
+
+	.show-below-979px {
+		display: block;
+	}
+
+	div.main-nav-mobile,
+	div.main-nav-mobile div.nav-sidebar,
+	div.nav-sidebar ul,
+	div.nav-sidebar ul li,
+	div.nav-sidebar ul li a.active {
+		width: 100%;
+	}
+
+	div.main-nav-mobile div.nav-sidebar {
+		position: relative;
+		top: inherit;
+		left: inherit;
+		border-bottom: 1px solid #ccc;
+		overflow: hidden;
+	}
+
+	div.wrapper.interface div#main-content-strip {
+		padding-left: 0;
+	}
+
+	div.nav-sidebar ul li.menu-toggle {
+		display: block;
+	}
+}
+
+@media(min-width: 980px) {
+	.hide-below-979px {
+		display: block;
+	}
+
+	.show-below-979px {
+		display: none;
+	}
+
+	div.nav-sidebar ul li.menu-toggle {
+		display: none;
+	}
+}
+
+
 div.work-experience-tags {
 	text-align: right;
 }
@@ -124,6 +189,7 @@ div.skills-tag a:hover {
 
 table.personal-info {
 	width: 100%;
+	border-width: 0;
 }
 
 
@@ -132,6 +198,7 @@ table.personal-info td.left {
 }
 
 table.personal-info td {
+	border-width: 0;
 	border-bottom: 1px solid #ddd;
 }
 /*zzz-
