@@ -4,5 +4,5 @@ export default Ember.Component.extend({
 	session: Ember.inject.service(),
   	tagName: 'div',
 	classNames: ['wrapper', 'interface', 'text-column'],
-	classNameBindings: ['classes', 'session.navCollapsed:nav-collapsed',  'session.navToggled:nav-toggled', 'session.placeholdersSupported:placeholders', 'interfaceTopBar:top-bar-present', 'session.userUiState.freezeNavigation:nav-frozen', 'session.hideContent:hide-content:show-content'],
+	classNameBindings: ['classes', 'session.navCollapsed:nav-collapsed',  'session.navToggled:nav-toggled'],
 });

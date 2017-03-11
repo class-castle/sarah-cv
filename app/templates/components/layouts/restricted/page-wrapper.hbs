@@ -1,8 +1,8 @@
 {{layouts/header-bar private=true systemMessage=systemMessage}}
 {{layouts/restricted/main-nav}}
-<div id= "main-content-strip" class="{{if navCollapsed 'nav-collapsed'}} {{if session.hideContent 'invisible'}} {{'container-3'}}">
+<div id= "main-content-strip" class="{{if navCollapsed 'nav-collapsed'}} {{if metadata.hideContent 'invisible'}} {{'container-3'}}">
 	{{yield}}
 </div>
-{{#if session.hideContent}}
+{{#if metadata.hideContent}}
 	{{layouts/restricted/loading-page}}
 {{/if}}
