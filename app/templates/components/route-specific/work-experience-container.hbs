@@ -1,8 +1,8 @@
 {{#layouts/restricted/page-wrapper class="work-experience"}}
   	{{#layouts/content-wrapper title='Work Experience'}}
   		
-      {{#custom-elements/in-page-alert type='info'}}
-  			Each item under work experience has been tagged with the required skills that pertain most closely to it. These tags can be clicked in order to see all of the work experience items which pertain to that particular skill.
+      {{#custom-elements/in-page-alert type='info' class='sub-header'}}
+  		Items have been tagged with relevant skills that are required for the position
   		{{/custom-elements/in-page-alert}}
       
       {{#each metadata.workExperienceItems as |item index|}}

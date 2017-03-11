@@ -51,16 +51,20 @@ export default Ember.Service.extend({
 			title: 'Researcher, UCT | 2015',
 			relatedSkills: [2, 4, 5, 8, 10],
 		},
-		
-		
-		
-	
+
 		{
 			
 			metaTitle: 'iziko-photographic-archiver',
 			contentPath: 'content/work-experience/',
 			title: 'Photographic Archiver, Iziko National Gallery | 2010',
 			relatedSkills: [1, 5, 9, 11],
+		},
+		{
+			
+			metaTitle: 'special-projects',
+			contentPath: 'content/work-experience/',
+			title: 'Special Projects | 2017',
+			relatedSkills: [1, 5, 9],
 		},
 		// {
 		

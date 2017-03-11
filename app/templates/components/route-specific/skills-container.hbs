@@ -1,10 +1,10 @@
 {{#layouts/restricted/page-wrapper class="skills"}}
   {{#layouts/content-wrapper title='Required Skills'}}
-        {{#custom-elements/in-page-alert type='info'}}
-          You can click on any on the the skills listed in the contents at the top of the page to see the work experience items which relate specifically to it.
+        {{#custom-elements/in-page-alert type='info' class='sub-header'}}
+          Click on a skill listed below to see relevant work experience
         {{/custom-elements/in-page-alert}}
       <div class='skills-contents'>
-        <h4 class='blue-caps'>Contents</h4>
+        <h4 class='blue-caps'>Skills required for the position</h4>
         <hr>
         <ul>
           {{#each metadata.skillsTags as |tag|}}
@@ -15,12 +15,6 @@
     <hr>
 
     <h3 class='current-skill'>{{currentTitle}}</h3>
-     
-      {{#if relevantWorkExperienceItems}}
-        {{#custom-elements/in-page-alert type='info' class='no-margin'}}
-          The above skill is best exemplified by the following previous work experience:
-        {{/custom-elements/in-page-alert}}
-      {{/if}}
       <div class='active-item'>
       {{#each relevantWorkExperienceItems as |item index|}}
           {{#custom-elements/animated-accordion title=item.title index=index}}

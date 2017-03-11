@@ -41,15 +41,37 @@ div.skills div.active-item {
 	margin-left: 40px;
 }
 
-div.skills h3.current-skill {
-	margin-bottom: 0.3em;
-	margin-top: 1em;
+.in-page-alert.sub-header {
+	margin-top: -17px;
+	margin-bottom: 25px;
+}
+
+img.photo {
+	max-width: 242px;	
+	margin-top: 10px;
+}
+@media(min-width: 1160px) {
+	img.photo {
+		float: right;
+		margin-left: 50px;
+	}
+	div.wrapper.interface.intro.text-column .body-content {
+		max-width: 960px;
+	}
+
+	div.wrapper.interface.intro.text-column .body-content .accordions {
+		max-width: 660px;
+	}
 }
 
 .in-page-alert.no-margin {
 	margin-bottom: 10px;
 }
 
+div.body-content .bold {
+	font-weight: 600;
+}
+div.body-content .sub-text,
 div.skills-contents ul li {
 	color: #777;
 	font-family: 'Times New Roman', serif;

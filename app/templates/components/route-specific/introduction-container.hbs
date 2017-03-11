@@ -1,6 +1,11 @@
 {{#layouts/restricted/page-wrapper class="intro"}}
+	
   {{#layouts/content-wrapper title='Biography'}}
- 		{{#custom-elements/animated-accordion title='Personal Information' classes='personal-info' open=true}}
+  		<div class='cover-photo-container'>
+		<img class='photo' src='assets/images/sarah-schafer.jpg' />
+	</div>
+		<div class='accordions'>
+ 		{{#custom-elements/animated-accordion title='Personal Information' classes='personal-info'}}
 			<table class='personal-info'>
 			    <tbody>
 			        <tr>
@@ -62,28 +67,8 @@
 			<p>Placement on the Rhodes University Dean&rsquo;s Merit List, and Golden Key membership awarded on academic merit.</p>
 			<p>Elected school prefect (declined), Academic colours, Cultural colours.</p>
 			<p>Trinity College of Music Grade 8 in piano performance.</p>
-			<p>My photographic work has been exhibited locally and internationally:</p>
-			<ul>
-			    <li>
-			        <strong>After the Masterclass</strong>, BMW showroom, Cape Town
-			        <ul>
-			            <li>(After attending a masterclass with Jurgen Schadeberg)</li>
-			        </ul>
-			    </li>
-			    <li>
-			        <strong>Collection of street photography</strong>, part of a collective
-			        <ul>
-			            <li>The Photographer&rsquo;s Gallery , Cape Town</li>
-			            <li>A selection of street photography</li>
-			        </ul>
-			    </li>
-			    <li>
-			        <strong>Waiting and Watching</strong>, Brussels, Belgium.
-			        <ul>
-			            <li>An exhibition organised by DeBuren, a Dutch/Flemish cultural organisation. A photo-story of mine was on show in Brussels for two months.</li>
-			        </ul>
-			    </li>
-			</ul>
+			<p>My photographic work has been exhibited locally and internationally. These include:</p>
+			<p style="padding-left: 30px;"><strong>After the Masterclass</strong>, <em>BMW showroom, Cape Town</em><br />After attending a masterclass with photojournalist Jurgen Schadeberg, an exhibition was held.<br /><strong>Collection of street photography</strong>, T<em>he Photographer&rsquo;s Gallery, Cape Town</em><br />A selection of street photography, part of a collective.<br /><strong>Waiting and Watching</strong>, <em>Brussels, Belgium</em><br />Organised by DeBuren, a Dutch/Flemish cultural organisation, a photo-story of mine was on show in Brussels for two months.</p>
 		{{/custom-elements/animated-accordion}}
 		{{#custom-elements/animated-accordion title='General skills' classes='skills'}}
 			<p>I am confident in software applications on Mac and Windows operating systems.</p>
@@ -96,10 +81,15 @@
 			    <li>Social media: Twitter, Facebook, Instagram</li>
 			</ul>
 			<p>My communication skills, both written and verbal, are excellent.</p>
-			<p>I am resourceful, a multi-tasker, and my organisational abilities are good. I understand the importance of meeting deadlines, and work well under pressure. I am happy to work in a team or independently, and I maintain good relationships with colleagues and contacts.</p>
+			<p>I am resourceful, a multi-tasker, and have effective time-management skills. </p> 
+			<p>I work well under pressure, and know the importance of meeting deadlines. </p>
+			<p>I am happy to work in a team or independently. </p>
+			<p>I maintain good relationships with colleagues, clients and contacts.</p>
+			<p>I have a high level of professionalism, humility and a sense of humour. </p>
 		{{/custom-elements/animated-accordion}}
 		{{#custom-elements/animated-accordion title='Interests' classes='interests'}}
 			<p>the Digital Humanities, Africa, art, people, words, food, feminism, information architecture, learning, human rights, gender, health, the Internet of Things, design, travel, architecture, music, languages, photography, books, mountains, running</p>
 		{{/custom-elements/animated-accordion}}
+	</div>
 	{{/layouts/content-wrapper}}
 {{/layouts/restricted/page-wrapper}}
