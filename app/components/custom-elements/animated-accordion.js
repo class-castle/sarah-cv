@@ -7,11 +7,14 @@ export default Ember.Component.extend({
 
 	didInsertElement: function() {
 		Ember.run.once(this, function() {
-			if (this.get('index') === 0) {
-			this.set('open', true);
-			}
+			// if (this.get('index') === 0) {
+			// this.set('open', true);
+			// }
+			//this.set('accordionIcon', 'svg/icon-plus');
 		});
 	},
+
+	
 
 	actions: {
 		toggleAccordion: function() {

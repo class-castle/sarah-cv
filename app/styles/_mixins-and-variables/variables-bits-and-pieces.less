@@ -2,14 +2,15 @@
 ALL PAGES BITS.LESS
 -------------------------------------------------------*/
 @main-font-family:  "Open Sans", sans-serif;
+@header-font-family: 'Nunito Sans', sans-serif;
 @body-color: #000;
 
-@page-header-color: @exatype-light-blue-three;
-@page-header-font-size: 3.2em;
-@page-header-text-transform: none;
+@page-header-color: #000;
+@page-header-font-size: 2.2em;
+@page-header-text-transform: uppercase;
 @page-header-text-align: left;
-@page-header-font-family: @main-font-family;
-@page-header-font-weight: 600;
+@page-header-font-family: @header-font-family;
+@page-header-font-weight: 800;
 @page-header-padding-top: 0px;
 @page-header-padding-bottom: 25px;
 @page-header-line-height: 100%;
@@ -25,9 +26,9 @@ DEFAULT BODY CONTENT TEXT STYLES {CORRESPONDS TO "02-bits-and-pieces.less"}
 
 @body-content-header-color: #555;
 @body-content-header-background-color: transparent;
-@body-content-header-text-transform: none;
+@body-content-header-text-transform: uppercase;
 @body-content-header-text-align: left;
-@body-content-header-font-family: @main-font-family;
+@body-content-header-font-family: @header-font-family;
 @body-content-header-font-weight: 600;
 
 @body-content-header-margin-bottom: 0.8em;
@@ -42,7 +43,7 @@ DEFAULT BODY CONTENT TEXT STYLES {CORRESPONDS TO "02-bits-and-pieces.less"}
 @body-content-text-text-align: justify;
 @body-content-text-color: #333;
 @body-content-text-font-style: normal;
-@body-content-text-font-weight: 400;
+@body-content-text-font-weight: 300;
 
 @body-content-text-max-width: 615px;
 @body-content-text-list-style: disc;
@@ -51,9 +52,9 @@ DEFAULT BODY CONTENT TEXT STYLES {CORRESPONDS TO "02-bits-and-pieces.less"}
 @body-content-paragraph-line-height: 170%;
 
 
-@body-content-link-color: @exatype-light-blue-three;
-@body-content-link-text-decoration: none;
-@body-content-link-hover-color: @body-content-link-color;
+@body-content-link-color: #000;
+@body-content-link-text-decoration: underline;
+@body-content-link-hover-color: #999;
 @body-content-link-hover-text-decoration: underline;
 @body-content-link-visited-color: grey;
 @body-content-link-visited-text-decoration: none;
@@ -67,7 +68,7 @@ DEFAULT BODY CONTENT TEXT STYLES {CORRESPONDS TO "02-bits-and-pieces.less"}
 @body-content-form-label-font-weight: 400;
 
 @body-content-hr-border-top-color: #ccc;
-@body-content-hr-border-top-width: 2px;
+@body-content-hr-border-top-width: 1px;
 /*------------------------------
 DEFAULT INTERFACE ELEMENT STYLES 
 ------------------------------*/
@@ -174,13 +175,13 @@ DEFAULT INTERFACE ELEMENT STYLES
 FOOTER STRIP TEXT STYLES {CORRESPOND TO "02-bits-and-pieces.less"}
 ----------------------------------------------------------------*/
 
-@footer-info-color: #fff;
+@footer-info-color: #ccc;
 @footer-info-font-style: normal;
 @footer-info-font-size: 1.2em;
 @footer-info-font-weight: normal;
 @footer-info-font-family: @main-font-family;
 @footer-info-text-transform: none;
-@footer-info-link-color: #fff;
+@footer-info-link-color: #ccc;
 @footer-info-link-text-decoration: none;
 @footer-info-link-hover-color: #333;
 @footer-info-link-hover-text-decoration: none;
@@ -190,10 +191,10 @@ TABLE STYLES
 ----------------------------------------------------------------*/
 
 @table-border-style: solid;
-@table-border-color: #ccc;
+@table-border-color: #transparent;
 
 @table-header-cell-color: #fff;
-@table-header-cell-background-color: @exatype-light-blue-three;
+@table-header-cell-background-color: transparent;
 @table-header-cell-border-color: darken(@exatype-light-blue-four, 10%);
 @table-header-cell-background-image: none;
 @table-header-cell-text-transform: none;
@@ -207,9 +208,9 @@ TABLE STYLES
 
 @table-cell-padding-top: 15px;
 @table-cell-padding-bottom: 15px;
-@table-cell-padding-left-right: 18px;
+@table-cell-padding-left-right: 0px;
 @table-cell-text-line-height: 100%;
-@table-cell-background-color: #fff;
+@table-cell-background-color: transprent;
 @table-cell-background-image: none;
 @table-cell-color: #555;
 @table-cell-font-family: @main-font-family;

@@ -9,11 +9,12 @@
 div.nav-sidebar {
 	position: fixed;
 	left: 0;	
-	top: 70px;
+	top: @header-height;
 	z-index: 99;
 	width: @sidebar-expanded-width;
-	overflow: hidden;
-	background: #333;
+	overflow: visible;
+	//background: #333;
+	border-right: 1px solid #ccc;
 	height: 100%;
 }
 
@@ -39,17 +40,17 @@ div.nav-sidebar ul li {
 	list-style: none;
 	height: @sidebar-nav-item-height;
 	width: 200px;
-	
+	overflow: visible;
 	height: @sidebar-nav-item-height;
 }
 
 /*---Top nav sidebar item (Toggles collapse of the menu)---*/
 
 div.nav-sidebar ul li.menu-toggle {
-	background: @exatype-light-blue-three;
+	//background: @exatype-light-blue-three;
 	display: block;
 	height: @sidebar-toggle-menu-list-item-height;
-	border-bottom: 1px solid #444;
+	border-bottom: 1px solid #ccc;
 } 
 
 div.nav-sidebar li.menu-toggle:hover {
@@ -88,22 +89,28 @@ div.nav-sidebar a {
 	display: block;
 	text-decoration: none;
 	font-size: 1.5em;
-	color: #fff;
+	color: #aaa;
 	float: left;
 	width: 100%;
 	line-height: @sidebar-nav-item-height;
-	border-bottom: 1px solid #2b2b2b;
+	border-bottom: 1px solid #ccc;
+	font-family: @header-font-family;
+	text-transform: uppercase;
+	padding-left: 15px;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 999;
 }
 
 div.nav-sidebar a:hover  {
-	background-color: #666;
+	color: #000;
 }
 
 div.nav-sidebar a.active {
-	background-color: #777;	
-	color: #fff;
+	color: #000;	
 	cursor: default;
-	border-top-color: #777;
+	width: @sidebar-expanded-width + 1;
+	background-color: #fff;
 }
 
 /*---Main nav link icons---*/

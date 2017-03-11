@@ -1,10 +1,10 @@
 div.wrapper.interface {
-	background: #fff url("/assets/images/paper-bg.png");
-	box-shadow: inset @sidebar-expanded-width + 10px 0px 6px -6px rgba(0,0,0,0.2);
+	//background: #fff url("/assets/images/paper-bg.png");
+	//box-shadow: inset @sidebar-expanded-width + 10px 0px 6px -6px rgba(0,0,0,0.2);
 }
 
 div.wrapper.interface.nav-collapsed {
-	box-shadow: inset @sidebar-collapsed-width + 10px 0px 6px -6px rgba(0,0,0,0.2);
+	//box-shadow: inset @sidebar-collapsed-width + 10px 0px 6px -6px rgba(0,0,0,0.2);
 }
 
 div.wrapper.interface.nav-toggled,
@@ -52,10 +52,10 @@ div.wrapper.interface .body-content {
 
 div.wrapper.interface + footer {
 	width: auto;
-	z-index: 999999999999;
-	.box-shadow-top;
-	padding-left: @sidebar-expanded-width;
+	z-index: 999;
+	position: relative;
 	transition: @sidebar-toggle-transition;
+	border-top: 1px solid #ccc;
 }
 
 div.wrapper.interface.nav-collapsed + footer {

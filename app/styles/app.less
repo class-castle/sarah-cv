@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600);
 @import url(https://fonts.googleapis.com/css?family=Lato:700);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:800);
 
 @import "_mixins-and-variables/variables-bits-and-pieces";
 @import "_mixins-and-variables/variables-general-site-layout";
@@ -36,6 +37,36 @@ div.work-experience-tags {
 	text-align: right;
 }
 
+div.skills div.active-item {
+	margin-left: 40px;
+}
+
+div.skills h3.current-skill {
+	margin-bottom: 0.3em;
+	margin-top: 1em;
+}
+
+.in-page-alert.no-margin {
+	margin-bottom: 10px;
+}
+
+div.skills-contents ul li {
+	color: #777;
+	font-family: 'Times New Roman', serif;
+	font-style: italic;
+}
+
+div.skills-contents ul li a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 400;
+}
+
+div.skills-contents ul li a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
 .skills-tag {
 	position: relative;
 	max-width: 500px;
@@ -47,11 +78,40 @@ div.work-experience-tags {
 .skills-tag div.svg {
 	position: absolute;
 	right: 0;
-	width: 15px;
-	margin: 5px 0 0 5px;
-	fill: @exatype-light-blue-three;
+	width: 13px;
+	margin: 6px 0 0 3px;
+	fill: #999;
 }
 
+div.skills-tag a {
+	font-family: 'Times New Roman', serif;
+	font-weight: 400;
+	font-style: italic;
+	text-decoration: none;
+	color: #999;
+}
+
+div.skills-tag a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.skills-tag:hover div.svg {
+	fill: #000;
+}
+
+table.personal-info {
+	width: 100%;
+}
+
+
+table.personal-info td.left {
+	width: 150px;
+}
+
+table.personal-info td {
+	border-bottom: 1px solid #ddd;
+}
 /*zzz-
 References
 -----------------------

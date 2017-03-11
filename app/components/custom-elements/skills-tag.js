@@ -7,7 +7,9 @@ export default Ember.Component.extend({
 	
 	tagTitle: function() {
 		if (this.get('relatedSkillIndex') || this.get('relatedSkillIndex') === 0) {
-			return this.get('metadata.skillsTags')[this.get('relatedSkillIndex')].title;
+			var thisSkill = this.get('metadata.skillsTags')[this.get('relatedSkillIndex')];
+			var displayTitle = thisSkill.shortTitle ? thisSkill.shortTitle : thisSkill.title;
+			return displayTitle;
 		}
 	}.property('relatedSkillIndex'),
 

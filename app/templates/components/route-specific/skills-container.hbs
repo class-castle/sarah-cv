@@ -1,29 +1,32 @@
 {{#layouts/restricted/page-wrapper class="skills"}}
   {{#layouts/content-wrapper title='Required Skills'}}
-      {{#unless relevantWorkExperienceItems}}
         {{#custom-elements/in-page-alert type='info'}}
           You can click on any on the the skills listed in the contents at the top of the page to see the work experience items which relate specifically to it.
         {{/custom-elements/in-page-alert}}
-      {{/unless}}
-      <h4>Contents</h4>
-      <hr>
-      <ol>
-        {{#each metadata.skillsTags as |tag|}}
-          <li>{{#link-to 'required-skills' (query-params tag=tag.metaTitle)}}{{tag.title}}{{/link-to}}</li>
-        {{/each}}
-      </ol>
+      <div class='skills-contents'>
+        <h4 class='blue-caps'>Contents</h4>
+        <hr>
+        <ul>
+          {{#each metadata.skillsTags as |tag|}}
+            <li>{{#link-to 'required-skills' (query-params tag=tag.metaTitle)}}{{tag.title}}{{/link-to}}</li>
+          {{/each}}
+        </ul>
+      </div>
     <hr>
-    <h3>{{currentTitle}}</h3>
-    {{#if relevantWorkExperienceItems}}
-      {{#custom-elements/in-page-alert type='info'}}
-      Below are all of the work experience items which relate specifically to the skill "<u>{{currentTitle}}</u>".
-        You can click on any on the the skills listed in the contents at the top of the page to see the work experience items which relate specifically to it.
-      {{/custom-elements/in-page-alert}}
-    {{/if}}
-    {{#each relevantWorkExperienceItems as |item index|}}
-        {{#custom-elements/animated-accordion title=item.title index=index}}
-          {{component item.content}}
-        {{/custom-elements/animated-accordion}}
-    {{/each}}
+
+    <h3 class='current-skill'>{{currentTitle}}</h3>
+     
+      {{#if relevantWorkExperienceItems}}
+        {{#custom-elements/in-page-alert type='info' class='no-margin'}}
+          The above skill is best exemplified by the following previous work experience:
+        {{/custom-elements/in-page-alert}}
+      {{/if}}
+      <div class='active-item'>
+      {{#each relevantWorkExperienceItems as |item index|}}
+          {{#custom-elements/animated-accordion title=item.title index=index}}
+            {{component item.content}}
+          {{/custom-elements/animated-accordion}}
+      {{/each}}
+    </div>
   {{/layouts/content-wrapper}}
 {{/layouts/restricted/page-wrapper}}
